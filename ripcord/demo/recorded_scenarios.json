@@ -1,0 +1,1236 @@
+{
+ "note": "Real recogniser output (sherpa-onnx Zipformer) on synthetic speech, taken from the validation split and picked to show each kind of outcome. Not a representative sample.",
+ "scenarios": [
+  {
+   "id": 101,
+   "title": "Clean line, no question needed",
+   "spoken": "1857",
+   "category": "clean-pass",
+   "condition": "snr25",
+   "speaker": 48,
+   "clip_id": "b00489",
+   "turns": [
+    {
+     "transcript": "yes are the order numbers eighteen fifty seven please",
+     "end_of_turn": true,
+     "words": [
+      {
+       "text": "yes",
+       "confidence": 0.84,
+       "start": 639,
+       "end": 799,
+       "word_is_final": true
+      },
+      {
+       "text": "are",
+       "confidence": 0.2366,
+       "start": 799,
+       "end": 959,
+       "word_is_final": true
+      },
+      {
+       "text": "the",
+       "confidence": 0.6876,
+       "start": 959,
+       "end": 1079,
+       "word_is_final": true
+      },
+      {
+       "text": "order",
+       "confidence": 0.8036,
+       "start": 1079,
+       "end": 1319,
+       "word_is_final": true
+      },
+      {
+       "text": "numbers",
+       "confidence": 0.7992,
+       "start": 1319,
+       "end": 1679,
+       "word_is_final": true
+      },
+      {
+       "text": "eighteen",
+       "confidence": 0.8203,
+       "start": 1679,
+       "end": 2079,
+       "word_is_final": true
+      },
+      {
+       "text": "fifty",
+       "confidence": 0.8033,
+       "start": 2079,
+       "end": 2399,
+       "word_is_final": true
+      },
+      {
+       "text": "seven",
+       "confidence": 0.7581,
+       "start": 2399,
+       "end": 2799,
+       "word_is_final": true
+      },
+      {
+       "text": "please",
+       "confidence": 0.6232,
+       "start": 2799,
+       "end": 3354,
+       "word_is_final": true
+      }
+     ]
+    }
+   ],
+   "replies": {
+    "yes": {
+     "transcript": "yes",
+     "words": [
+      {
+       "text": "yes",
+       "confidence": 0.5683,
+       "start": 759,
+       "end": 1379,
+       "word_is_final": true
+      }
+     ]
+    },
+    "no": {
+     "transcript": "so he asked one at five seven",
+     "words": [
+      {
+       "text": "so",
+       "confidence": 0.3788,
+       "start": 639,
+       "end": 759,
+       "word_is_final": true
+      },
+      {
+       "text": "he",
+       "confidence": 0.1507,
+       "start": 759,
+       "end": 959,
+       "word_is_final": true
+      },
+      {
+       "text": "asked",
+       "confidence": 0.3159,
+       "start": 959,
+       "end": 1279,
+       "word_is_final": true
+      },
+      {
+       "text": "one",
+       "confidence": 0.4971,
+       "start": 1279,
+       "end": 1360,
+       "word_is_final": true
+      },
+      {
+       "text": "at",
+       "confidence": 0.3038,
+       "start": 1360,
+       "end": 1519,
+       "word_is_final": true
+      },
+      {
+       "text": "five",
+       "confidence": 0.6875,
+       "start": 1519,
+       "end": 1839,
+       "word_is_final": true
+      },
+      {
+       "text": "seven",
+       "confidence": 0.5876,
+       "start": 1839,
+       "end": 2379,
+       "word_is_final": true
+      }
+     ]
+    }
+   },
+   "expect": {
+    "final_value": "1857",
+    "heard": "1857",
+    "ripcord_asked": false
+   }
+  },
+  {
+   "id": 102,
+   "title": "Clean line, no question needed",
+   "spoken": "6892",
+   "category": "clean-pass",
+   "condition": "snr25",
+   "speaker": 14,
+   "clip_id": "b00770",
+   "turns": [
+    {
+     "transcript": "my confirmation occur to six eight nine two",
+     "end_of_turn": true,
+     "words": [
+      {
+       "text": "my",
+       "confidence": 0.6633,
+       "start": 639,
+       "end": 799,
+       "word_is_final": true
+      },
+      {
+       "text": "confirmation",
+       "confidence": 0.6524,
+       "start": 799,
+       "end": 1319,
+       "word_is_final": true
+      },
+      {
+       "text": "occur",
+       "confidence": 0.7532,
+       "start": 1319,
+       "end": 1599,
+       "word_is_final": true
+      },
+      {
+       "text": "to",
+       "confidence": 0.21,
+       "start": 1599,
+       "end": 1799,
+       "word_is_final": true
+      },
+      {
+       "text": "six",
+       "confidence": 0.8052,
+       "start": 1799,
+       "end": 2000,
+       "word_is_final": true
+      },
+      {
+       "text": "eight",
+       "confidence": 0.7276,
+       "start": 2000,
+       "end": 2319,
+       "word_is_final": true
+      },
+      {
+       "text": "nine",
+       "confidence": 0.7446,
+       "start": 2319,
+       "end": 2759,
+       "word_is_final": true
+      },
+      {
+       "text": "two",
+       "confidence": 0.7211,
+       "start": 2759,
+       "end": 3059,
+       "word_is_final": true
+      }
+     ]
+    }
+   ],
+   "replies": {
+    "yes": {
+     "transcript": "yes",
+     "words": [
+      {
+       "text": "yes",
+       "confidence": 0.6282,
+       "start": 759,
+       "end": 1379,
+       "word_is_final": true
+      }
+     ]
+    },
+    "no": {
+     "transcript": "know that throng at six eight nine two",
+     "words": [
+      {
+       "text": "know",
+       "confidence": 0.8418,
+       "start": 639,
+       "end": 759,
+       "word_is_final": true
+      },
+      {
+       "text": "that",
+       "confidence": 0.815,
+       "start": 759,
+       "end": 959,
+       "word_is_final": true
+      },
+      {
+       "text": "throng",
+       "confidence": 0.6099,
+       "start": 959,
+       "end": 1279,
+       "word_is_final": true
+      },
+      {
+       "text": "at",
+       "confidence": 0.5138,
+       "start": 1279,
+       "end": 1359,
+       "word_is_final": true
+      },
+      {
+       "text": "six",
+       "confidence": 0.429,
+       "start": 1319,
+       "end": 1559,
+       "word_is_final": true
+      },
+      {
+       "text": "eight",
+       "confidence": 0.8936,
+       "start": 1559,
+       "end": 1759,
+       "word_is_final": true
+      },
+      {
+       "text": "nine",
+       "confidence": 0.7849,
+       "start": 1759,
+       "end": 2119,
+       "word_is_final": true
+      },
+      {
+       "text": "two",
+       "confidence": 0.6838,
+       "start": 2119,
+       "end": 2419,
+       "word_is_final": true
+      }
+     ]
+    }
+   },
+   "expect": {
+    "final_value": "6892",
+    "heard": "6892",
+    "ripcord_asked": false
+   }
+  },
+  {
+   "id": 103,
+   "title": "Heard wrong in noise, caught and fixed",
+   "spoken": "6709",
+   "category": "noisy-caught",
+   "condition": "snr5",
+   "speaker": 101,
+   "clip_id": "b00091",
+   "turns": [
+    {
+     "transcript": "looking roughen six seven deer and on",
+     "end_of_turn": true,
+     "words": [
+      {
+       "text": "looking",
+       "confidence": 0.6842,
+       "start": 519,
+       "end": 959,
+       "word_is_final": true
+      },
+      {
+       "text": "roughen",
+       "confidence": 0.3709,
+       "start": 959,
+       "end": 1319,
+       "word_is_final": true
+      },
+      {
+       "text": "six",
+       "confidence": 0.581,
+       "start": 1319,
+       "end": 1639,
+       "word_is_final": true
+      },
+      {
+       "text": "seven",
+       "confidence": 0.8077,
+       "start": 1639,
+       "end": 1919,
+       "word_is_final": true
+      },
+      {
+       "text": "deer",
+       "confidence": 0.4007,
+       "start": 1919,
+       "end": 2240,
+       "word_is_final": true
+      },
+      {
+       "text": "and",
+       "confidence": 0.5891,
+       "start": 2240,
+       "end": 2440,
+       "word_is_final": true
+      },
+      {
+       "text": "on",
+       "confidence": 0.4883,
+       "start": 2440,
+       "end": 2740,
+       "word_is_final": true
+      }
+     ]
+    }
+   ],
+   "replies": {
+    "yes": {
+     "transcript": "correct",
+     "words": [
+      {
+       "text": "correct",
+       "confidence": 0.7079,
+       "start": 719,
+       "end": 1403,
+       "word_is_final": true
+      }
+     ]
+    },
+    "no": {
+     "transcript": "know the number is six seven o nine was to come on",
+     "words": [
+      {
+       "text": "know",
+       "confidence": 0.801,
+       "start": 639,
+       "end": 799,
+       "word_is_final": true
+      },
+      {
+       "text": "the",
+       "confidence": 0.8071,
+       "start": 799,
+       "end": 1000,
+       "word_is_final": true
+      },
+      {
+       "text": "number",
+       "confidence": 0.8706,
+       "start": 1000,
+       "end": 1319,
+       "word_is_final": true
+      },
+      {
+       "text": "is",
+       "confidence": 0.4375,
+       "start": 1319,
+       "end": 1599,
+       "word_is_final": true
+      },
+      {
+       "text": "six",
+       "confidence": 0.8284,
+       "start": 1599,
+       "end": 1759,
+       "word_is_final": true
+      },
+      {
+       "text": "seven",
+       "confidence": 0.6463,
+       "start": 1759,
+       "end": 2000,
+       "word_is_final": true
+      },
+      {
+       "text": "o",
+       "confidence": 0.6487,
+       "start": 2000,
+       "end": 2200,
+       "word_is_final": true
+      },
+      {
+       "text": "nine",
+       "confidence": 0.6855,
+       "start": 2200,
+       "end": 2559,
+       "word_is_final": true
+      },
+      {
+       "text": "was",
+       "confidence": 0.1682,
+       "start": 2559,
+       "end": 2639,
+       "word_is_final": true
+      },
+      {
+       "text": "to",
+       "confidence": 0.6237,
+       "start": 2639,
+       "end": 2879,
+       "word_is_final": true
+      },
+      {
+       "text": "come",
+       "confidence": 0.689,
+       "start": 2879,
+       "end": 3000,
+       "word_is_final": true
+      },
+      {
+       "text": "on",
+       "confidence": 0.3517,
+       "start": 3000,
+       "end": 3080,
+       "word_is_final": true
+      }
+     ]
+    }
+   },
+   "expect": {
+    "final_value": "6709",
+    "heard": "67",
+    "ripcord_asked": true
+   }
+  },
+  {
+   "id": 104,
+   "title": "Heard wrong in noise, caught and fixed",
+   "spoken": "2227",
+   "category": "noisy-caught",
+   "condition": "snr5",
+   "speaker": 59,
+   "clip_id": "b00170",
+   "turns": [
+    {
+     "transcript": "its ardor too too too seven",
+     "end_of_turn": true,
+     "words": [
+      {
+       "text": "its",
+       "confidence": 0.6955,
+       "start": 639,
+       "end": 879,
+       "word_is_final": true
+      },
+      {
+       "text": "ardor",
+       "confidence": 0.6468,
+       "start": 879,
+       "end": 1319,
+       "word_is_final": true
+      },
+      {
+       "text": "too",
+       "confidence": 0.6631,
+       "start": 1319,
+       "end": 1599,
+       "word_is_final": true
+      },
+      {
+       "text": "too",
+       "confidence": 0.5688,
+       "start": 1599,
+       "end": 1799,
+       "word_is_final": true
+      },
+      {
+       "text": "too",
+       "confidence": 0.4971,
+       "start": 1799,
+       "end": 2119,
+       "word_is_final": true
+      },
+      {
+       "text": "seven",
+       "confidence": 0.4359,
+       "start": 2119,
+       "end": 2619,
+       "word_is_final": true
+      }
+     ]
+    }
+   ],
+   "replies": {
+    "yes": {
+     "transcript": "correct",
+     "words": [
+      {
+       "text": "correct",
+       "confidence": 0.6349,
+       "start": 719,
+       "end": 1379,
+       "word_is_final": true
+      }
+     ]
+    },
+    "no": {
+     "transcript": "sorry i said triple to seven",
+     "words": [
+      {
+       "text": "sorry",
+       "confidence": 0.7941,
+       "start": 639,
+       "end": 1039,
+       "word_is_final": true
+      },
+      {
+       "text": "i",
+       "confidence": 0.8547,
+       "start": 1039,
+       "end": 1279,
+       "word_is_final": true
+      },
+      {
+       "text": "said",
+       "confidence": 0.6468,
+       "start": 1279,
+       "end": 1439,
+       "word_is_final": true
+      },
+      {
+       "text": "triple",
+       "confidence": 0.6543,
+       "start": 1439,
+       "end": 1839,
+       "word_is_final": true
+      },
+      {
+       "text": "to",
+       "confidence": 0.4567,
+       "start": 1839,
+       "end": 2240,
+       "word_is_final": true
+      },
+      {
+       "text": "seven",
+       "confidence": 0.6569,
+       "start": 2240,
+       "end": 2715,
+       "word_is_final": true
+      }
+     ]
+    }
+   },
+   "expect": {
+    "final_value": "2227",
+    "heard": "7",
+    "ripcord_asked": true
+   }
+  },
+  {
+   "id": 105,
+   "title": "Phone-line audio",
+   "spoken": "5122",
+   "category": "phone-line",
+   "condition": "phone",
+   "speaker": 26,
+   "clip_id": "b00040",
+   "turns": [
+    {
+     "transcript": "ordinumb five one tube",
+     "end_of_turn": true,
+     "words": [
+      {
+       "text": "ordinumb",
+       "confidence": 0.42,
+       "start": 719,
+       "end": 1319,
+       "word_is_final": true
+      },
+      {
+       "text": "five",
+       "confidence": 0.4852,
+       "start": 1319,
+       "end": 1679,
+       "word_is_final": true
+      },
+      {
+       "text": "one",
+       "confidence": 0.4622,
+       "start": 1679,
+       "end": 1959,
+       "word_is_final": true
+      },
+      {
+       "text": "tube",
+       "confidence": 0.3848,
+       "start": 1959,
+       "end": 2704,
+       "word_is_final": true
+      }
+     ]
+    }
+   ],
+   "replies": {
+    "yes": {
+     "transcript": "if that's correct",
+     "words": [
+      {
+       "text": "if",
+       "confidence": 0.1741,
+       "start": 639,
+       "end": 839,
+       "word_is_final": true
+      },
+      {
+       "text": "that's",
+       "confidence": 0.8095,
+       "start": 839,
+       "end": 1199,
+       "word_is_final": true
+      },
+      {
+       "text": "correct",
+       "confidence": 0.7677,
+       "start": 1199,
+       "end": 1694,
+       "word_is_final": true
+      }
+     ]
+    },
+    "no": {
+     "transcript": "though the numbers five one double two",
+     "words": [
+      {
+       "text": "though",
+       "confidence": 0.327,
+       "start": 639,
+       "end": 799,
+       "word_is_final": true
+      },
+      {
+       "text": "the",
+       "confidence": 0.8266,
+       "start": 799,
+       "end": 959,
+       "word_is_final": true
+      },
+      {
+       "text": "numbers",
+       "confidence": 0.7591,
+       "start": 959,
+       "end": 1360,
+       "word_is_final": true
+      },
+      {
+       "text": "five",
+       "confidence": 0.7313,
+       "start": 1360,
+       "end": 1639,
+       "word_is_final": true
+      },
+      {
+       "text": "one",
+       "confidence": 0.2704,
+       "start": 1639,
+       "end": 1839,
+       "word_is_final": true
+      },
+      {
+       "text": "double",
+       "confidence": 0.8187,
+       "start": 1839,
+       "end": 2319,
+       "word_is_final": true
+      },
+      {
+       "text": "two",
+       "confidence": 0.461,
+       "start": 2319,
+       "end": 2619,
+       "word_is_final": true
+      }
+     ]
+    }
+   },
+   "expect": {
+    "final_value": "5122",
+    "heard": "51",
+    "ripcord_asked": true
+   }
+  },
+  {
+   "id": 106,
+   "title": "Caller repeats it and is misheard again: it asks again, never guesses",
+   "spoken": "1215",
+   "category": "restated-wrong",
+   "condition": "snr15",
+   "speaker": 61,
+   "clip_id": "b00000",
+   "turns": [
+    {
+     "transcript": "my ordinumers one too on fire",
+     "end_of_turn": true,
+     "words": [
+      {
+       "text": "my",
+       "confidence": 0.4861,
+       "start": 639,
+       "end": 959,
+       "word_is_final": true
+      },
+      {
+       "text": "ordinumers",
+       "confidence": 0.5461,
+       "start": 959,
+       "end": 1639,
+       "word_is_final": true
+      },
+      {
+       "text": "one",
+       "confidence": 0.2103,
+       "start": 1639,
+       "end": 1759,
+       "word_is_final": true
+      },
+      {
+       "text": "too",
+       "confidence": 0.5476,
+       "start": 1759,
+       "end": 2039,
+       "word_is_final": true
+      },
+      {
+       "text": "on",
+       "confidence": 0.8222,
+       "start": 2039,
+       "end": 2200,
+       "word_is_final": true
+      },
+      {
+       "text": "fire",
+       "confidence": 0.6237,
+       "start": 2200,
+       "end": 2715,
+       "word_is_final": true
+      }
+     ]
+    }
+   ],
+   "replies": {
+    "yes": {
+     "transcript": "your thoughts correct",
+     "words": [
+      {
+       "text": "your",
+       "confidence": 0.4851,
+       "start": 639,
+       "end": 799,
+       "word_is_final": true
+      },
+      {
+       "text": "thoughts",
+       "confidence": 0.3572,
+       "start": 799,
+       "end": 1199,
+       "word_is_final": true
+      },
+      {
+       "text": "correct",
+       "confidence": 0.7708,
+       "start": 1199,
+       "end": 1844,
+       "word_is_final": true
+      }
+     ]
+    },
+    "no": {
+     "transcript": "know the number is when two and five",
+     "words": [
+      {
+       "text": "know",
+       "confidence": 0.3023,
+       "start": 639,
+       "end": 799,
+       "word_is_final": true
+      },
+      {
+       "text": "the",
+       "confidence": 0.8332,
+       "start": 799,
+       "end": 959,
+       "word_is_final": true
+      },
+      {
+       "text": "number",
+       "confidence": 0.837,
+       "start": 959,
+       "end": 1279,
+       "word_is_final": true
+      },
+      {
+       "text": "is",
+       "confidence": 0.5726,
+       "start": 1279,
+       "end": 1399,
+       "word_is_final": true
+      },
+      {
+       "text": "when",
+       "confidence": 0.3427,
+       "start": 1399,
+       "end": 1519,
+       "word_is_final": true
+      },
+      {
+       "text": "two",
+       "confidence": 0.4724,
+       "start": 1519,
+       "end": 1759,
+       "word_is_final": true
+      },
+      {
+       "text": "and",
+       "confidence": 0.349,
+       "start": 1759,
+       "end": 2039,
+       "word_is_final": true
+      },
+      {
+       "text": "five",
+       "confidence": 0.7101,
+       "start": 2039,
+       "end": 2350,
+       "word_is_final": true
+      }
+     ]
+    }
+   },
+   "expect": {
+    "final_value": "1215",
+    "heard": "12",
+    "ripcord_asked": true
+   }
+  },
+  {
+   "id": 107,
+   "title": "Heard wrong and Ripcord did NOT catch it (a miss)",
+   "spoken": "3870",
+   "category": "confidently-wrong",
+   "condition": "snr10",
+   "speaker": 101,
+   "clip_id": "b00649",
+   "turns": [
+    {
+     "transcript": "looking reference three thousand eight hundred seven",
+     "end_of_turn": true,
+     "words": [
+      {
+       "text": "looking",
+       "confidence": 0.5642,
+       "start": 639,
+       "end": 959,
+       "word_is_final": true
+      },
+      {
+       "text": "reference",
+       "confidence": 0.6546,
+       "start": 959,
+       "end": 1360,
+       "word_is_final": true
+      },
+      {
+       "text": "three",
+       "confidence": 0.6611,
+       "start": 1360,
+       "end": 1639,
+       "word_is_final": true
+      },
+      {
+       "text": "thousand",
+       "confidence": 0.8792,
+       "start": 1639,
+       "end": 2079,
+       "word_is_final": true
+      },
+      {
+       "text": "eight",
+       "confidence": 0.8458,
+       "start": 2079,
+       "end": 2399,
+       "word_is_final": true
+      },
+      {
+       "text": "hundred",
+       "confidence": 0.6435,
+       "start": 2399,
+       "end": 2879,
+       "word_is_final": true
+      },
+      {
+       "text": "seven",
+       "confidence": 0.7285,
+       "start": 2879,
+       "end": 3398,
+       "word_is_final": true
+      }
+     ]
+    }
+   ],
+   "replies": {
+    "yes": {
+     "transcript": "yet that's right",
+     "words": [
+      {
+       "text": "yet",
+       "confidence": 0.6581,
+       "start": 639,
+       "end": 959,
+       "word_is_final": true
+      },
+      {
+       "text": "that's",
+       "confidence": 0.7866,
+       "start": 959,
+       "end": 1279,
+       "word_is_final": true
+      },
+      {
+       "text": "right",
+       "confidence": 0.2714,
+       "start": 1279,
+       "end": 1579,
+       "word_is_final": true
+      }
+     ]
+    },
+    "no": {
+     "transcript": "sorry i said three eggs of a deer",
+     "words": [
+      {
+       "text": "sorry",
+       "confidence": 0.8002,
+       "start": 759,
+       "end": 1039,
+       "word_is_final": true
+      },
+      {
+       "text": "i",
+       "confidence": 0.7934,
+       "start": 1039,
+       "end": 1279,
+       "word_is_final": true
+      },
+      {
+       "text": "said",
+       "confidence": 0.3747,
+       "start": 1279,
+       "end": 1439,
+       "word_is_final": true
+      },
+      {
+       "text": "three",
+       "confidence": 0.7284,
+       "start": 1439,
+       "end": 1599,
+       "word_is_final": true
+      },
+      {
+       "text": "eggs",
+       "confidence": 0.5899,
+       "start": 1599,
+       "end": 1799,
+       "word_is_final": true
+      },
+      {
+       "text": "of",
+       "confidence": 0.2045,
+       "start": 1799,
+       "end": 2039,
+       "word_is_final": true
+      },
+      {
+       "text": "a",
+       "confidence": 0.1591,
+       "start": 2039,
+       "end": 2240,
+       "word_is_final": true
+      },
+      {
+       "text": "deer",
+       "confidence": 0.4059,
+       "start": 2240,
+       "end": 2659,
+       "word_is_final": true
+      }
+     ]
+    }
+   },
+   "expect": {
+    "final_value": "3870",
+    "heard": "3807",
+    "ripcord_asked": false
+   }
+  },
+  {
+   "id": 108,
+   "title": "Heard wrong and Ripcord did NOT catch it (a miss)",
+   "spoken": "8809",
+   "category": "confidently-wrong",
+   "condition": "snr25",
+   "speaker": 51,
+   "clip_id": "b00498",
+   "turns": [
+    {
+     "transcript": "yes over ordern number is a thousand eight hundred nine please",
+     "end_of_turn": true,
+     "words": [
+      {
+       "text": "yes",
+       "confidence": 0.544,
+       "start": 639,
+       "end": 959,
+       "word_is_final": true
+      },
+      {
+       "text": "over",
+       "confidence": 0.5092,
+       "start": 959,
+       "end": 1159,
+       "word_is_final": true
+      },
+      {
+       "text": "ordern",
+       "confidence": 0.6256,
+       "start": 1159,
+       "end": 1480,
+       "word_is_final": true
+      },
+      {
+       "text": "number",
+       "confidence": 0.7968,
+       "start": 1480,
+       "end": 1759,
+       "word_is_final": true
+      },
+      {
+       "text": "is",
+       "confidence": 0.6313,
+       "start": 1759,
+       "end": 2000,
+       "word_is_final": true
+      },
+      {
+       "text": "a",
+       "confidence": 0.5717,
+       "start": 2000,
+       "end": 2200,
+       "word_is_final": true
+      },
+      {
+       "text": "thousand",
+       "confidence": 0.8731,
+       "start": 2200,
+       "end": 2559,
+       "word_is_final": true
+      },
+      {
+       "text": "eight",
+       "confidence": 0.856,
+       "start": 2559,
+       "end": 2839,
+       "word_is_final": true
+      },
+      {
+       "text": "hundred",
+       "confidence": 0.8072,
+       "start": 2839,
+       "end": 3159,
+       "word_is_final": true
+      },
+      {
+       "text": "nine",
+       "confidence": 0.8432,
+       "start": 3159,
+       "end": 3399,
+       "word_is_final": true
+      },
+      {
+       "text": "please",
+       "confidence": 0.62,
+       "start": 3399,
+       "end": 4059,
+       "word_is_final": true
+      }
+     ]
+    }
+   ],
+   "replies": {
+    "yes": {
+     "transcript": "yet that's right",
+     "words": [
+      {
+       "text": "yet",
+       "confidence": 0.7413,
+       "start": 639,
+       "end": 839,
+       "word_is_final": true
+      },
+      {
+       "text": "that's",
+       "confidence": 0.7746,
+       "start": 839,
+       "end": 1240,
+       "word_is_final": true
+      },
+      {
+       "text": "right",
+       "confidence": 0.7622,
+       "start": 1240,
+       "end": 1540,
+       "word_is_final": true
+      }
+     ]
+    },
+    "no": {
+     "transcript": "sorry i said double eight o nine",
+     "words": [
+      {
+       "text": "sorry",
+       "confidence": 0.8613,
+       "start": 639,
+       "end": 959,
+       "word_is_final": true
+      },
+      {
+       "text": "i",
+       "confidence": 0.9216,
+       "start": 959,
+       "end": 1159,
+       "word_is_final": true
+      },
+      {
+       "text": "said",
+       "confidence": 0.8738,
+       "start": 1159,
+       "end": 1360,
+       "word_is_final": true
+      },
+      {
+       "text": "double",
+       "confidence": 0.8629,
+       "start": 1360,
+       "end": 1679,
+       "word_is_final": true
+      },
+      {
+       "text": "eight",
+       "confidence": 0.5341,
+       "start": 1679,
+       "end": 1959,
+       "word_is_final": true
+      },
+      {
+       "text": "o",
+       "confidence": 0.8594,
+       "start": 1959,
+       "end": 2159,
+       "word_is_final": true
+      },
+      {
+       "text": "nine",
+       "confidence": 0.5961,
+       "start": 2159,
+       "end": 2727,
+       "word_is_final": true
+      }
+     ]
+    }
+   },
+   "expect": {
+    "final_value": "8809",
+    "heard": "1809",
+    "ripcord_asked": false
+   }
+  }
+ ]
+}

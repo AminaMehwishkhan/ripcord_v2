@@ -1,0 +1,142 @@
+{
+  "description": "Each scenario is a sequence of AssemblyAI-shaped Turn messages (transcript + per-word confidence). Used by backend/app/mock_service.py to simulate a session, and by backend/tests/test_evaluation.py to score Ripcord's real risk_engine/entity_detector against ground truth. Word confidences are illustrative, hand-authored to represent the described audio condition (clear speech vs noisy/short/contradicted), not measurements from a real audio file.",
+  "scenarios": [
+    {
+      "id": 1,
+      "title": "Clean capture, correct value",
+      "spoken": "1580",
+      "turns": [
+        {"transcript": "My order number is one five eight zero.", "end_of_turn": true,
+         "words": [
+           {"text": "My", "confidence": 0.99}, {"text": "order", "confidence": 0.98},
+           {"text": "number", "confidence": 0.99}, {"text": "is", "confidence": 0.99},
+           {"text": "one", "confidence": 0.96}, {"text": "five", "confidence": 0.95},
+           {"text": "eight", "confidence": 0.94}, {"text": "zero.", "confidence": 0.95}
+         ]}
+      ],
+      "expect": {"should_clarify": false, "final_value": "1580", "silent_failure_if_no_ripcord": false}
+    },
+    {
+      "id": 2,
+      "title": "Misheard capture — 1580 heard as 150",
+      "spoken": "1580",
+      "turns": [
+        {"transcript": "My order number is one five zero.", "end_of_turn": true,
+         "words": [
+           {"text": "My", "confidence": 0.98}, {"text": "order", "confidence": 0.97},
+           {"text": "number", "confidence": 0.98}, {"text": "is", "confidence": 0.98},
+           {"text": "one", "confidence": 0.55}, {"text": "five", "confidence": 0.51},
+           {"text": "zero.", "confidence": 0.48}
+         ]}
+      ],
+      "expect": {"should_clarify": true, "final_value": "1580", "silent_failure_if_no_ripcord": true, "wrong_value_accepted": "150"}
+    },
+    {
+      "id": 3,
+      "title": "Correct digits but low ASR confidence throughout",
+      "spoken": "4817",
+      "turns": [
+        {"transcript": "Order four eight one seven.", "end_of_turn": true,
+         "words": [
+           {"text": "Order", "confidence": 0.9},
+           {"text": "four", "confidence": 0.58}, {"text": "eight", "confidence": 0.6},
+           {"text": "one", "confidence": 0.62}, {"text": "seven.", "confidence": 0.59}
+         ]}
+      ],
+      "expect": {"should_clarify": true, "final_value": "4817", "silent_failure_if_no_ripcord": false}
+    },
+    {
+      "id": 4,
+      "title": "Explicit contradiction across turns",
+      "spoken": "3719",
+      "turns": [
+        {"transcript": "My order number is 3179.", "end_of_turn": true,
+         "words": [{"text": "My", "confidence": 0.98}, {"text": "order", "confidence": 0.97},
+                    {"text": "number", "confidence": 0.98}, {"text": "is", "confidence": 0.98},
+                    {"text": "3179.", "confidence": 0.9}]},
+        {"transcript": "No, I said 3719.", "end_of_turn": true,
+         "words": [{"text": "No,", "confidence": 0.95}, {"text": "I", "confidence": 0.97},
+                    {"text": "said", "confidence": 0.96}, {"text": "3719.", "confidence": 0.92}]}
+      ],
+      "expect": {"should_clarify": true, "final_value": "3719", "silent_failure_if_no_ripcord": true}
+    },
+    {
+      "id": 5,
+      "title": "User repeats the number unprompted",
+      "spoken": "2264",
+      "turns": [
+        {"transcript": "It's order 2264.", "end_of_turn": true,
+         "words": [{"text": "It's", "confidence": 0.9}, {"text": "order", "confidence": 0.92},
+                    {"text": "2264.", "confidence": 0.7}]},
+        {"transcript": "2264, that's the order number.", "end_of_turn": true,
+         "words": [{"text": "2264,", "confidence": 0.72}, {"text": "that's", "confidence": 0.95},
+                    {"text": "the", "confidence": 0.97}, {"text": "order", "confidence": 0.96},
+                    {"text": "number.", "confidence": 0.97}]}
+      ],
+      "expect": {"should_clarify": true, "final_value": "2264", "silent_failure_if_no_ripcord": false}
+    },
+    {
+      "id": 6,
+      "title": "Noisy background audio, moderate confidence dip",
+      "spoken": "6093",
+      "turns": [
+        {"transcript": "Order number six zero nine three.", "end_of_turn": true,
+         "words": [{"text": "Order", "confidence": 0.8}, {"text": "number", "confidence": 0.78},
+                    {"text": "six", "confidence": 0.7}, {"text": "zero", "confidence": 0.68},
+                    {"text": "nine", "confidence": 0.71}, {"text": "three.", "confidence": 0.69}]}
+      ],
+      "expect": {"should_clarify": false, "final_value": "6093", "silent_failure_if_no_ripcord": false}
+    },
+    {
+      "id": 7,
+      "title": "High confidence, correct format — proceed with no interruption",
+      "spoken": "7744",
+      "turns": [
+        {"transcript": "My order number is 7744.", "end_of_turn": true,
+         "words": [{"text": "My", "confidence": 0.99}, {"text": "order", "confidence": 0.99},
+                    {"text": "number", "confidence": 0.99}, {"text": "is", "confidence": 0.99},
+                    {"text": "7744.", "confidence": 0.97}]}
+      ],
+      "expect": {"should_clarify": false, "final_value": "7744", "silent_failure_if_no_ripcord": false}
+    },
+    {
+      "id": 8,
+      "title": "Incomplete entity, cut off mid-number",
+      "spoken": "3100 (cut off)",
+      "turns": [
+        {"transcript": "It's three one...", "end_of_turn": true,
+         "words": [{"text": "It's", "confidence": 0.9}, {"text": "three", "confidence": 0.6},
+                    {"text": "one...", "confidence": 0.4}]}
+      ],
+      "expect": {"should_clarify": true, "final_value": null, "silent_failure_if_no_ripcord": true}
+    },
+    {
+      "id": 9,
+      "title": "Self-correction mid-conversation",
+      "spoken": "7782",
+      "turns": [
+        {"transcript": "Order 7782.", "end_of_turn": true,
+         "words": [{"text": "Order", "confidence": 0.9}, {"text": "7782.", "confidence": 0.85}]},
+        {"transcript": "Actually, sorry, it's 7782, not 7182.", "end_of_turn": true,
+         "words": [{"text": "Actually,", "confidence": 0.95}, {"text": "sorry,", "confidence": 0.96},
+                    {"text": "it's", "confidence": 0.97}, {"text": "7782,", "confidence": 0.9},
+                    {"text": "not", "confidence": 0.97}, {"text": "7182.", "confidence": 0.88}]}
+      ],
+      "expect": {"should_clarify": true, "final_value": "7782", "silent_failure_if_no_ripcord": false}
+    },
+    {
+      "id": 10,
+      "title": "Outright rejection of the captured value",
+      "spoken": "9021",
+      "turns": [
+        {"transcript": "Order 9012.", "end_of_turn": true,
+         "words": [{"text": "Order", "confidence": 0.88}, {"text": "9012.", "confidence": 0.8}]},
+        {"transcript": "No, that's wrong. It's 9021.", "end_of_turn": true,
+         "words": [{"text": "No,", "confidence": 0.96}, {"text": "that's", "confidence": 0.95},
+                    {"text": "wrong.", "confidence": 0.95}, {"text": "It's", "confidence": 0.97},
+                    {"text": "9021.", "confidence": 0.91}]}
+      ],
+      "expect": {"should_clarify": true, "final_value": "9021", "silent_failure_if_no_ripcord": true}
+    }
+  ]
+}

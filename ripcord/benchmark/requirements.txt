@@ -1,0 +1,4 @@
+# Only needed to rebuild / retrain / re-score the benchmark (NOT to run Ripcord itself).
+numpy>=1.26
+scipy>=1.11
+sherpa-onnx>=1.10
